@@ -1,0 +1,12 @@
+{
+  "default": [
+    "clean",
+    "compileAssets"
+  ],
+  "compileAssets": [
+    "bowercopy",
+    "concat",
+    "cssmin",
+    "uglify"
+  ]
+}

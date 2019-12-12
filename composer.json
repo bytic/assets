@@ -1,0 +1,21 @@
+{
+  "name": "bytic/assets",
+  "license": "",
+  "description": "Assets builder for bytic",
+  "authors": [
+    {
+      "name": "Gabriel Solomon",
+      "email": "hello@gabrielsolomon.ro"
+    }
+  ],
+  "autoload": {
+    "psr-4": {},
+    "classmap": [],
+    "files": []
+  },
+  "autoload-dev": {
+    "psr-4": {}
+  },
+  "require-dev": {},
+  "require": {}
+}
