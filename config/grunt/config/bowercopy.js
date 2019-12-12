@@ -5,7 +5,7 @@ module.exports = {
     },
     scripts: {
         files: {
-            "js/jquery.js": "jquery/dist/jquery.js",
+            "js/jquery.js": "jquery/jquery.js",
             "js/jquery-ui.js": "jquery-ui/jquery-ui.js",
             "js/jquery.jgrowl.js": "jGrowl/jquery.jgrowl.js",
             "js/bootstrap.js": "bootstrap/dist/js/bootstrap.js",
