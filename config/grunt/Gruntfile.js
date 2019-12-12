@@ -3,7 +3,7 @@ module.exports = function (grunt) {
 
     require('load-grunt-config')(grunt, {
         configPath: [
-            path.join(process.cwd(), 'vendor/42km/common/grunt/config'),
+            path.join(process.cwd(), 'vendor/bytic/assets/grunt/config'),
             path.join(process.cwd(), 'grunt')
         ],
         loadGruntTasks: {
