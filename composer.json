@@ -8,6 +8,10 @@
       "email": "hello@gabrielsolomon.ro"
     }
   ],
+  "require": {
+    "symfony/webpack-encore-bundle": "^1.7"
+  },
+  "require-dev": {},
   "autoload": {
     "psr-4": {},
     "classmap": [],
@@ -15,7 +19,5 @@
   },
   "autoload-dev": {
     "psr-4": {}
-  },
-  "require-dev": {},
-  "require": {}
+  }
 }
