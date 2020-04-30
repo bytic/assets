@@ -10,7 +10,6 @@ use Symfony\WebpackEncoreBundle\Asset\TagRenderer;
  */
 trait HasTagRenderer
 {
-
     protected function getTagRenderer(): TagRenderer
     {
         return $this->getContainer()->get('assets.tag_renderer');
