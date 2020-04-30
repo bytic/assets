@@ -1,15 +1,15 @@
 <?php
 
-namespace Nip\Assets\Tests\Functions;
+namespace ByTIC\Assets\Tests\Functions;
 
-use Nip\Assets\AssetsManager;
-use Nip\Assets\AssetsServiceProvider;
-use Nip\Assets\Encore\EntrypointLookupFactory;
-use Nip\Assets\Tests\AbstractTest;
+use ByTIC\Assets\AssetsManager;
+use ByTIC\Assets\AssetsServiceProvider;
+use ByTIC\Assets\Encore\EntrypointLookupFactory;
+use ByTIC\Assets\Tests\AbstractTest;
 
 /**
  * Class AssetsFunctionsTest
- * @package Nip\Assets\Tests\Functions
+ * @package ByTIC\Assets\Tests\Functions
  */
 class AssetsFunctionsTest extends AbstractTest
 {

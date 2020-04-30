@@ -1,8 +1,8 @@
 <?php
 
-namespace Nip\Assets\Tests;
+namespace ByTIC\Assets\Tests;
 
-use Nip\Assets\Encore\EntrypointLookupFactory;
+use ByTIC\Assets\Encore\EntrypointLookupFactory;
 use PHPUnit\Framework\TestCase;
 
 /**

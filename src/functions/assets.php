@@ -1,6 +1,6 @@
 <?php
 
-use Nip\Container\Container;
+use ByTIC\Container\Container;
 
 /**
  * @param $entryName
@@ -27,7 +27,7 @@ function assets_render_link_files($entryName, string $packageName = null, string
 }
 
 /**
- * @return \Nip\Assets\AssetsManager
+ * @return \ByTIC\Assets\AssetsManager
  * @throws Exception
  */
 function assets_manager()

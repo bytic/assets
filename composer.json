@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Nip\\Assets\\": "src/"
+      "ByTIC\\Assets\\": "src/"
     },
     "files": [
       "src/functions/assets.php"
@@ -28,8 +28,8 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Nip\\Assets\\Tests\\": "tests/src",
-      "Nip\\Assets\\Tests\\Fixtures\\": "tests/fixtures"
+      "ByTIC\\Assets\\Tests\\": "tests/src",
+      "ByTIC\\Assets\\Tests\\Fixtures\\": "tests/fixtures"
     }
   }
 }

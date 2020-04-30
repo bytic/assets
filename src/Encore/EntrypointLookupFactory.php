@@ -1,14 +1,14 @@
 <?php
 
-namespace Nip\Assets\Encore;
+namespace ByTIC\Assets\Encore;
 
-use Nip\Config\Config;
+use ByTIC\Config\Config;
 use Psr\Cache\CacheItemPoolInterface;
 use Symfony\WebpackEncoreBundle\Asset\EntrypointLookup;
 
 /**
  * Class EntrypointLookupFactory
- * @package Nip\Assets\Encore
+ * @package ByTIC\Assets\Encore
  */
 class EntrypointLookupFactory
 {

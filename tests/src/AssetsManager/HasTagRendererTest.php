@@ -1,15 +1,15 @@
 <?php
 
-namespace Nip\Assets\Tests\AssetsManager;
+namespace ByTIC\Assets\Tests\AssetsManager;
 
-use Nip\Assets\AssetsManager;
-use Nip\Assets\AssetsServiceProvider;
-use Nip\Assets\Encore\EntrypointLookupFactory;
-use Nip\Assets\Tests\AbstractTest;
+use ByTIC\Assets\AssetsManager;
+use ByTIC\Assets\AssetsServiceProvider;
+use ByTIC\Assets\Encore\EntrypointLookupFactory;
+use ByTIC\Assets\Tests\AbstractTest;
 
 /**
  * Class HasTagRendererTest
- * @package Nip\Assets\Tests\AssetsManager
+ * @package ByTIC\Assets\Tests\AssetsManager
  */
 class HasTagRendererTest extends AbstractTest
 {

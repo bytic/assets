@@ -1,10 +1,10 @@
 <?php
 
-namespace Nip\Assets;
+namespace ByTIC\Assets;
 
-use Nip\Assets\Encore\EntrypointLookupFactory;
-use Nip\Assets\Encore\EntrypointsCollection;
-use Nip\Container\ServiceProviders\Providers\AbstractSignatureServiceProvider;
+use ByTIC\Assets\Encore\EntrypointLookupFactory;
+use ByTIC\Assets\Encore\EntrypointsCollection;
+use ByTIC\Container\ServiceProviders\Providers\AbstractSignatureServiceProvider;
 use Symfony\Component\Asset\Package;
 use Symfony\Component\Asset\Packages;
 use Symfony\Component\Asset\VersionStrategy\EmptyVersionStrategy;
@@ -13,7 +13,7 @@ use Symfony\WebpackEncoreBundle\Asset\TagRenderer;
 
 /**
  * Class AssetsServiceProvider
- * @package Nip\Assets
+ * @package ByTIC\Assets
  */
 class AssetsServiceProvider extends AbstractSignatureServiceProvider
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Nip\Assets\AssetsManager;
+namespace ByTIC\Assets\AssetsManager;
 
 use Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface;
 
 /**
  * Trait HasEntrypointLookup
- * @package Nip\Assets\AssetsManager
+ * @package ByTIC\Assets\AssetsManager
  */
 trait HasEntrypointLookup
 {

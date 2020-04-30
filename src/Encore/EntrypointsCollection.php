@@ -1,13 +1,13 @@
 <?php
 
-namespace Nip\Assets\Encore;
+namespace ByTIC\Assets\Encore;
 
 use Psr\Container\ContainerInterface;
 use Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface;
 
 /**
  * Class EntrypointsCollection
- * @package Nip\Assets\Encore
+ * @package ByTIC\Assets\Encore
  */
 class EntrypointsCollection implements ContainerInterface
 {

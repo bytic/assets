@@ -1,12 +1,12 @@
 <?php
 
-namespace Nip\Assets;
+namespace ByTIC\Assets;
 
-use Nip\Container\ContainerAwareTrait;
+use ByTIC\Container\ContainerAwareTrait;
 
 /**
  * Class AssetsManager
- * @package Nip\Assets
+ * @package ByTIC\Assets
  */
 class AssetsManager
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Nip\Assets\Tests\Encore;
+namespace ByTIC\Assets\Tests\Encore;
 
-use Nip\Assets\Encore\EntrypointLookupFactory;
-use Nip\Assets\Tests\AbstractTest;
+use ByTIC\Assets\Encore\EntrypointLookupFactory;
+use ByTIC\Assets\Tests\AbstractTest;
 use Symfony\WebpackEncoreBundle\Asset\EntrypointLookup;
 
 /**
  * Class EntrypointLookupFactoryTest
- * @package Nip\Assets\Tests\Encore
+ * @package ByTIC\Assets\Tests\Encore
  */
 class EntrypointLookupFactoryTest extends AbstractTest
 {

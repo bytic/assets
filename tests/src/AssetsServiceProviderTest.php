@@ -1,16 +1,16 @@
 <?php
 
-namespace Nip\Assets\Tests;
+namespace ByTIC\Assets\Tests;
 
-use Nip\Assets\AssetsManager;
-use Nip\Assets\AssetsServiceProvider;
-use Nip\Assets\Encore\EntrypointLookupFactory;
+use ByTIC\Assets\AssetsManager;
+use ByTIC\Assets\AssetsServiceProvider;
+use ByTIC\Assets\Encore\EntrypointLookupFactory;
 use Symfony\WebpackEncoreBundle\Asset\EntrypointLookupCollection;
 use Symfony\WebpackEncoreBundle\Asset\TagRenderer;
 
 /**
  * Class AssetsServiceProviderTest
- * @package Nip\Assets\Tests
+ * @package ByTIC\Assets\Tests
  */
 class AssetsServiceProviderTest extends AbstractTest
 {
