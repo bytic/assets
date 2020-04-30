@@ -1,6 +1,6 @@
 <?php
 
-use ByTIC\Container\Container;
+use Nip\Container\Container;
 
 /**
  * @param $entryName

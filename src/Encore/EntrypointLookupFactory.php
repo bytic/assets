@@ -2,7 +2,7 @@
 
 namespace ByTIC\Assets\Encore;
 
-use ByTIC\Config\Config;
+use Nip\Config\Config;
 use Psr\Cache\CacheItemPoolInterface;
 use Symfony\WebpackEncoreBundle\Asset\EntrypointLookup;
 

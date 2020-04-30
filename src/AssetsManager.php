@@ -2,7 +2,7 @@
 
 namespace ByTIC\Assets;
 
-use ByTIC\Container\ContainerAwareTrait;
+use Nip\Container\ContainerAwareTrait;
 
 /**
  * Class AssetsManager

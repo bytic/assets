@@ -4,7 +4,7 @@ namespace ByTIC\Assets;
 
 use ByTIC\Assets\Encore\EntrypointLookupFactory;
 use ByTIC\Assets\Encore\EntrypointsCollection;
-use ByTIC\Container\ServiceProviders\Providers\AbstractSignatureServiceProvider;
+use Nip\Container\ServiceProviders\Providers\AbstractSignatureServiceProvider;
 use Symfony\Component\Asset\Package;
 use Symfony\Component\Asset\Packages;
 use Symfony\Component\Asset\VersionStrategy\EmptyVersionStrategy;
