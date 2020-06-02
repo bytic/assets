@@ -12,7 +12,7 @@ trait HasEntrypointLookup
 {
     protected function getEntrypointLookup(string $entrypointName): EntrypointLookupInterface
     {
-        return $this->getContainer()->get('assets.entrypoint_lookup');
+        return $this->getContainer()->get('assets.entrypoint_lookup')->getEntrypointLookup($entrypointName);
     }
 
     public function getWebpackJsFiles(string $entryName, string $entrypointName = '_default'): array

@@ -10,6 +10,7 @@
   ],
   "require": {
     "bytic/container": "^0.9|^1.0",
+    "bytic/collections": "^1.0",
     "bytic/config": "^0.9|^1.0",
     "bytic/cache": "^0.9|^1.0",
     "symfony/webpack-encore-bundle": "^1.7"

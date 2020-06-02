@@ -10,3 +10,11 @@ ByTIC Config component
 [![Quality Score](https://img.shields.io/scrutinizer/g/bytic/assets.svg?style=flat-square)](https://scrutinizer-ci.com/g/bytic/assets)
 [![StyleCI](https://styleci.io/repos/227572333/shield?branch=master)](https://styleci.io/repos/227572333)
 [![Total Downloads](https://img.shields.io/packagist/dt/bytic/assets.svg?style=flat-square)](https://packagist.org/packages/bytic/assets)
+
+
+### INSPIRATION
+https://github.com/Stolz/Assets
+https://github.com/orchestral/asset
+
+https://github.com/kriswallsmith/assetic
+https://github.com/ventoviro/windwalker-core/blob/master/src/Core/Asset/AssetManager.php
