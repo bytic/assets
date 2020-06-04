@@ -14,7 +14,7 @@ class Asset
     use Asset\Traits\HasContentTrait;
 
     const TYPE_STYLES = 'STYLES';
-    const TYPE_SCRIPTS = 'SCRIPT';
+    const TYPE_SCRIPTS = 'SCRIPTS';
 
     /**
      * @var string
@@ -29,7 +29,7 @@ class Asset
      * @param string $source
      * @param string $type
      */
-    public function __construct(string $source, $type)
+    public function __construct(string $source = '', $type = '')
     {
         $this->source = $source;
         $this->type = $type;

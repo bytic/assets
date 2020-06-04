@@ -21,12 +21,12 @@ class EntryPointTest extends AbstractTest
 
         $scripts = $entrypoint->scripts();
         self::assertInstanceOf(AssetCollection::class, $scripts);
-        self::assertSame(Asset::TYPE_SCRIPTS, $scripts->getType());
+        self::assertSame(Asset::TYPE_SCRIPTS, $scripts->getAssetType());
         self::assertSame($scripts, $entrypoint->scripts());
 
         $styles = $entrypoint->styles();
         self::assertInstanceOf(AssetCollection::class, $styles);
-        self::assertSame(Asset::TYPE_STYLES, $styles->getType());
+        self::assertSame(Asset::TYPE_STYLES, $styles->getAssetType());
         self::assertSame($styles, $entrypoint->styles());
     }
 

@@ -16,7 +16,7 @@ class AssetTest extends AbstractTest
         $asset = new Asset('test.css', Asset::TYPE_STYLES);
 
         self::assertSame(
-            '<style href="test.css" type="text/css" rel="stylesheet"></style>',
+            '<link href="test.css" type="text/css" rel="stylesheet" />',
             $asset->output()
         );
     }

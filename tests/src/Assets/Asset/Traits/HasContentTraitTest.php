@@ -2,7 +2,6 @@
 
 namespace ByTIC\Assets\Tests\Assets\Asset\Traits;
 
-
 use ByTIC\Assets\Assets\Asset;
 use ByTIC\Assets\Tests\AbstractTest;
 

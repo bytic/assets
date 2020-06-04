@@ -3,6 +3,7 @@
 namespace ByTIC\Assets\Assets\Asset;
 
 use ByTIC\Assets\Assets\Asset;
+use Nip\Utility\Arr;
 
 /**
  * Class AssetRenderer
@@ -40,7 +41,14 @@ class AssetRenderer
     {
         $tag = $this->tag();
         $attributes = $this->attribString();
-        $output = sprintf($tag, $attributes);
+        $content = $this->asset->getContent();
+        $output =
+            sprintf(
+                $tag,
+                $attributes,
+                $content
+            );
+
         return $output;
     }
 
@@ -49,12 +57,13 @@ class AssetRenderer
      */
     protected function tag()
     {
-        if ($this->asset->getType() == Asset::TYPE_STYLES) {
-            return '<style %s></style>';
+        if ($this->asset->getType() == Asset::TYPE_STYLES && $this->asset->hasContent()) {
+            return '<style %s>%s</style>';
         }
         if ($this->asset->getType() == Asset::TYPE_SCRIPTS) {
-            return '<script %s></script>';
+            return '<script %s>%s</script>';
         }
+
         return '<link %s />';
     }
 
@@ -80,10 +89,14 @@ class AssetRenderer
     protected function prepareAttribs()
     {
         $attributesMap = $this->asset->getAttribs();
-        $method = 'prepareAttribs' . ucfirst($this->asset->getType());
+        if (!$this->asset->getType()) {
+            return $attributesMap;
+        }
+        $method = 'prepareAttribs'.ucfirst(strtolower($this->asset->getType()));
         if (method_exists($this, $method)) {
             $attributesMap = $this->{$method}($attributesMap);
         }
+
         return $attributesMap;
     }
 
@@ -93,7 +106,12 @@ class AssetRenderer
      */
     protected function prepareAttribsStyles($attributes)
     {
-        $attributes['href'] = $this->asset->getSource();
+        unset($attributes['href']);
+        $source = $this->asset->getSource();
+        if ($source) {
+            $attributes = Arr::prepend($attributes, $this->asset->getSource(), 'href');
+        }
+
         return $attributes;
     }
 
@@ -103,7 +121,11 @@ class AssetRenderer
      */
     protected function prepareAttribsScripts($attributes)
     {
-        $attributes['src'] = $this->asset->getSource();
+        unset($attributes['src']);
+        $source = $this->asset->getSource();
+        if ($source) {
+            $attributes = Arr::prepend($attributes, $this->asset->getSource(), 'src');
+        }
         return $attributes;
     }
 }

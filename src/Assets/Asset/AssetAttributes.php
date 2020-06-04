@@ -12,7 +12,6 @@ class AssetAttributes
 {
     protected static $defaultAttribs = [
         Asset::TYPE_STYLES => [
-            'href' => '',
             'type' => 'text/css',
             'rel' => 'stylesheet',
         ],

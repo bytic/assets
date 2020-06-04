@@ -12,13 +12,16 @@ trait CanRenderTrait
 {
     protected $output = null;
 
+    /**
+     * @return string
+     */
     public function __toString()
     {
         return $this->render();
     }
 
     /**
-     * @return void|null
+     * @return string
      */
     public function output()
     {

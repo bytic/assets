@@ -2,18 +2,38 @@
 
 namespace ByTIC\Assets\Assets;
 
-use Nip\Collections\Collection;
+use Nip\Collections\Typed\ClassCollection;
 
 /**
  * Class AssetCollection
  * @package ByTIC\Assets\Assets
  */
-class AssetCollection extends Collection
+class AssetCollection extends ClassCollection
 {
     /**
      * @var string
      */
-    protected $type = '';
+    protected $validClass = Asset::class;
+
+    protected $assetType = '';
+
+    /**
+     * @inheritDoc
+     */
+    public function offsetSet($offset, $value)
+    {
+        $this->ensureItem($value);
+        parent::offsetSet($offset, $value);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function unshift($value, $key = null)
+    {
+        $this->ensureItem($value);
+        parent::unshift($value, $key);
+    }
 
     /**
      * {@inheritDoc}
@@ -34,17 +54,17 @@ class AssetCollection extends Collection
     /**
      * @return string
      */
-    public function getType(): string
+    public function getAssetType(): string
     {
-        return $this->type;
+        return $this->assetType;
     }
 
     /**
      * @param string $type
      */
-    public function setType(string $type): void
+    public function setAssetType(string $type): void
     {
-        $this->type = $type;
+        $this->assetType = $type;
     }
     /**
      * @return string
@@ -63,7 +83,7 @@ class AssetCollection extends Collection
         $items = $this->all();
         unset($items['_internal']);
         foreach ($items as $item) {
-            $output .= $item->render();
+            $output .= $item->output();
         }
         return $output;
     }
@@ -73,7 +93,7 @@ class AssetCollection extends Collection
      */
     public function renderRaw()
     {
-        return $this->getInternal()->render();
+        return $this->getInternal()->output();
     }
 
     /**
@@ -82,7 +102,7 @@ class AssetCollection extends Collection
     protected function getInternal()
     {
         if (!$this->has('_internal')) {
-            $asset = $this->newItem(null);
+            $asset = $this->newItem('');
             $this->set('_internal', $asset);
             return $asset;
         }
@@ -91,11 +111,21 @@ class AssetCollection extends Collection
 
     /**
      * @param $value
+     */
+    protected function ensureItem(&$value)
+    {
+        if ($value instanceof Asset) {
+            return;
+        }
+        $value = $this->newItem($value);
+    }
+
+    /**
+     * @param $value
      * @return Asset
      */
     protected function newItem($value)
     {
-        $asset = new Asset($value, $this->getType());
-        return $asset;
+        return new Asset($value, $this->getAssetType());
     }
 }

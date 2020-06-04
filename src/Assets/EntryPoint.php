@@ -30,18 +30,18 @@ class EntryPoint
      * @param $entryName
      * @noinspection PhpDocMissingThrowsInspection
      */
-    public function addFromWebpack($entryName)
+    public function addFromWebpack($entryName, $method = 'prepend')
     {
         /** @noinspection PhpUnhandledExceptionInspection */
         $scripts = assets_manager()->getWebpackJsFiles($entryName);
         foreach ($scripts as $script) {
-            $this->scripts()->add($script);
+            $this->scripts()->{$method}($script);
         }
 
         /** @noinspection PhpUnhandledExceptionInspection */
         $styles = assets_manager()->getWebpackCssFiles($entryName);
         foreach ($styles as $style) {
-            $this->styles()->add($style);
+            $this->styles()->{$method}($style);
         }
     }
 
@@ -63,7 +63,7 @@ class EntryPoint
     protected function initCollection($type)
     {
         $collection = new AssetCollection();
-        $collection->setType($type);
+        $collection->setAssetType($type);
         $this->collections[$type] = $collection;
     }
 }
