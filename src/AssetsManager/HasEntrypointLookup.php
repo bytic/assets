@@ -19,14 +19,15 @@ trait HasEntrypointLookup
      * @param string $entrypointName
      * @return bool|false
      */
-    public function hasEntrypoint(string $entrypointName)
+    public function hasEntrypoint(string $entryName, string $entrypointName = '_default')
     {
         try {
-            $this->getEntrypointLookup($entrypointName);
+            $files = $this->getEntrypointLookup($entrypointName)->getJavaScriptFiles($entryName);
+            $this->getEntrypointLookup($entrypointName)->reset();
+            return is_array($files) && count($files);
         } catch (\Exception $e) {
             return false;
         }
-        return true;
     }
 
     public function getWebpackJsFiles(string $entryName, string $entrypointName = '_default'): array
