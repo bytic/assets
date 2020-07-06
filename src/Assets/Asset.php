@@ -3,6 +3,7 @@
 namespace ByTIC\Assets\Assets;
 
 use ByTIC\Assets\Assets\Asset\AssetAttributes;
+use ByTIC\Assets\Assets\Asset\AssetSource;
 
 /**
  * Class Asset
@@ -31,7 +32,7 @@ class Asset
      */
     public function __construct(string $source = '', $type = '')
     {
-        $this->source = $source;
+        $this->source = AssetSource::check($source, $type);
         $this->type = $type;
         $this->attribs = AssetAttributes::defaultFor($type);
     }
@@ -41,6 +42,9 @@ class Asset
      */
     public function getSource(): string
     {
+        if ($this->source instanceof \Closure) {
+            $this->source = ($this->source)();
+        }
         return $this->source;
     }
 
