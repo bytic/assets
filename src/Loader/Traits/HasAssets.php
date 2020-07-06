@@ -12,6 +12,5 @@ trait HasAssets
 
     public function addFile($asset, $collectionName = null)
     {
-
     }
 }

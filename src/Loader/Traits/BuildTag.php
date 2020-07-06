@@ -13,6 +13,5 @@ trait BuildTag
      */
     public function buildTag($asset)
     {
-
     }
 }

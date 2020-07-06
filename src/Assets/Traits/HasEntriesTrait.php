@@ -32,7 +32,6 @@ trait HasEntriesTrait
      */
     public function getEntry(string $entry = '_default')
     {
-
         if (!isset($this->entries[$entry])) {
             $this->entries[$entry] = new EntryPoint();
         }

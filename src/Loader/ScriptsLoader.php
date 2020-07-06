@@ -8,5 +8,4 @@ namespace ByTIC\Assets\Loader;
  */
 class ScriptsLoader extends AbstractLoader
 {
-
 }
