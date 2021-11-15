@@ -3,6 +3,7 @@
 namespace ByTIC\Assets\Assets\Asset;
 
 use ByTIC\Assets\Assets\Asset;
+use Nip\Utility\Str;
 use Nip\Utility\Traits\SingletonTrait;
 
 /**
@@ -54,6 +55,9 @@ class AssetSource
      */
     protected function isFullPath($source)
     {
+        if (Str::startsWith($source, 'http')) {
+            return true;
+        }
         if (strpos($source, '.css') !== false) {
             return true;
         }

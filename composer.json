@@ -10,6 +10,7 @@
   ],
   "require": {
     "bytic/collections": "^1.0",
+    "bytic/utility": "^1.0",
     "symfony/webpack-encore-bundle": "^1.7"
   },
   "require-dev": {

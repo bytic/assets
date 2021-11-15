@@ -34,6 +34,7 @@ class AssetSourceTest extends AbstractTest
     public function data_check()
     {
         return [
+            ['http://test.com/css', Asset::TYPE_STYLES, 'http://test.com/css'],
             ['test.css', Asset::TYPE_STYLES, 'test.css'],
             ['test', Asset::TYPE_STYLES, '/assets/stylesheets/test.css'],
             ['test', Asset::TYPE_SCRIPTS, '/assets/scripts/test.js'],
