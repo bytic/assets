@@ -66,6 +66,7 @@ class AssetCollection extends ClassCollection
     {
         $this->assetType = $type;
     }
+
     /**
      * @return string
      */
@@ -79,13 +80,13 @@ class AssetCollection extends ClassCollection
      */
     public function render()
     {
-        $output = '';
+        $output = [];
         $items = $this->all();
         unset($items['_internal']);
         foreach ($items as $item) {
-            $output .= $item->output();
+            $output[$item->getSource()] = $item->output();
         }
-        return $output;
+        return implode('', $output);
     }
 
     /**
