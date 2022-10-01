@@ -20,7 +20,7 @@ class AssetCollection extends ClassCollection
     /**
      * @inheritDoc
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         $this->ensureItem($value);
         parent::offsetSet($offset, $value);
