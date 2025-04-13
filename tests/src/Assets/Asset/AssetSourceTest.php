@@ -5,6 +5,7 @@ namespace ByTIC\Assets\Tests\Assets\Asset;
 use ByTIC\Assets\Assets\Asset;
 use ByTIC\Assets\Assets\Asset\AssetSource;
 use ByTIC\Assets\Tests\AbstractTest;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 /**
  * Class AssetSourceTest
@@ -13,11 +14,11 @@ use ByTIC\Assets\Tests\AbstractTest;
 class AssetSourceTest extends AbstractTest
 {
     /**
-     * @dataProvider data_check
      * @param $source
      * @param $type
      * @param $output
      */
+    #[DataProvider('data_check')]
     public function test_check($source, $type, $output)
     {
         $mock = \Mockery::mock(AssetSource::class)->shouldAllowMockingProtectedMethods()->makePartial();
@@ -31,7 +32,7 @@ class AssetSourceTest extends AbstractTest
     /**
      * @return array[]
      */
-    public function data_check()
+    public static function data_check()
     {
         return [
             ['http://test.com/css', Asset::TYPE_STYLES, 'http://test.com/css'],

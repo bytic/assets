@@ -26,7 +26,7 @@ class EntrypointsCollection implements ContainerInterface
      * @inheritDoc
      * @return EntrypointLookupInterface
      */
-    public function get($id)
+    public function get(string $id)
     {
         if (!$this->has($id)) {
             return null;
@@ -38,7 +38,7 @@ class EntrypointsCollection implements ContainerInterface
     /**
      * @inheritDoc
      */
-    public function has($id)
+    public function has(string $id): bool
     {
         return isset($this->entries[$id]);
     }
